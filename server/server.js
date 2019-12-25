@@ -21,7 +21,7 @@ app.post('/usuario', (req, res) => {
 
     if(body.nombre === undefined) {
         res.status(400).json({
-            mensaje: "El nombre no fue especificado";
+            mensaje: "El nombre no fue especificado"
         });
     } else {
         res.json({
