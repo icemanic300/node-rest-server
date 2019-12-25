@@ -19,9 +19,16 @@ app.post('/usuario', (req, res) => {
 
     let body = req.body;
 
-    res.json({
-        persona: body
-    });
+    if(body.nombre === undefined) {
+        res.status(400).json({
+            mensaje: "El nombre no fue especificado";
+        });
+    } else {
+        res.json({
+            persona: body
+        });
+    }
+
 });
 
 app.listen(process.env.PORT, () => {
