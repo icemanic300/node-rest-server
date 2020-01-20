@@ -26,6 +26,7 @@ app.post('/usuario', (req, res) => {
         });
     } else {
         res.json({
+            ok:true,
             persona: body
         });
     }
